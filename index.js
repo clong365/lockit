@@ -50,11 +50,12 @@ var Lockit = module.exports = function(config) {
   if (this.config.rest) this.rest();
 
   // expose name and email to template engine
-  this.router.use(function(req, res, next) {
+  //Frank
+  /*this.router.use(function(req, res, next) {
     res.locals.name = req.session.name || '';
     res.locals.email = req.session.email || '';
     next();
-  });
+  });*/
 
   // add submodule routes
   this.router.use(signup.router);
